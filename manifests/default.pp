@@ -44,7 +44,7 @@ package { [
 }
 
 exec {'clone:tops':
-  command => "git clone https://github.com/ayoshiaki/tops.git /tmp/tops && cd /tmp/tops && git submodule update --initsudo ldconfig && cmake . && make && make install && sudo ldconfig",
+  command => "git clone https://github.com/ayoshiaki/tops.git /tmp/tops && cd /tmp/tops && git submodule update --init && sudo ldconfig && cmake . && make && make install && sudo ldconfig",
   timeout => 1800,
   require => [
     Package['build-essential'],
